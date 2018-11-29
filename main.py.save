@@ -1,0 +1,13 @@
+from shade import *
+
+simple_logging(debug=True)
+conn = openstack_cloud(cloud='maas')
+
+images = conn.list_images()
+for image in images:
+    print(image)
+
+image_id = 'c55094e9-699c-4da9-95b4-2e2e75f4c66e'
+image = conn.get_image(image_id)
+print(image)
+78ecb1ba-b44c-4277-833c-6268ae2045cK1
